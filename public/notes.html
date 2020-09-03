@@ -53,18 +53,16 @@
         })
     });
 
+    $(".new-note").on("click", function(){
+      $(".note-title").empty();
+      $(".note-textarea").empty();
+    })
+
     function generateNotes() {
-      $("#savedNotes").empty();
+      // $("#savedNotes").empty();
       $.get("/api/notes")
         .then(function (data) {
           console.log(data);
-          for (let i in data) {
-            console.log(data);
-            let newNote = `
-      <li class="bg-light rounded mt-1">${data[i].title}</lo>
-      `
-            $("#savedNotes").append(newNote);
-          }
         })
     }
     generateNotes();

@@ -11,6 +11,7 @@ let savedNotes = [];
 //MiddleWare for POSTing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
 
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "/public/index.html"));
@@ -37,7 +38,7 @@ app.get("/api/notes", function(req, res){
     // res.json(savedNotes);
     fs.readFile(__dirname + "/db/db.json", function(err, data){
         if(err) throw err;
-        console.log(JSON.stringify(data[i]));
+        console.log(data[0].title);
     })
 })
 
