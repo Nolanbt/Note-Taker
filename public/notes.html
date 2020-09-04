@@ -37,38 +37,6 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="/assets/js/index.js"></script>
-  <script>
-
-    $(".save-note").on("click", function () {
-      let note = {
-        title: $(".note-title").val().trim(),
-        text: $(".note-textarea").val().trim(),
-      }
-
-      $.post("/api/notes", note)
-        .then(function (data) {
-          console.log(data)
-          alert("Your note has been saved!")
-          generateNotes();
-        })
-    });
-
-    $(".new-note").on("click", function(){
-      $(".note-title").empty();
-      $(".note-textarea").empty();
-    })
-
-    function generateNotes() {
-      // $("#savedNotes").empty();
-      $.get("/api/notes")
-        .then(function (data) {
-          console.log(data);
-        })
-    }
-    generateNotes();
-
-
-  </script>
 </body>
 
 </html>

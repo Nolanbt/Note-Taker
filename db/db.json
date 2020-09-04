@@ -1,1 +1,17 @@
-[{"title":"hdfghdf","text":"hdfghdgh"},{"title":"hdfghdf","text":"hdfghdgh"}]
+[
+    {
+        "title": "Sample Note 1",
+        "text": "Sample Text",
+        "id": "998d37d8-c897-4505-bb61-21c1da8f4dcd"
+    },
+    {
+        "title": "Sample Note 2",
+        "text": "TEst",
+        "id": "14eae841-2c5b-49ef-a80a-4d301aaf945e"
+    },
+    {
+        "title": "Sample Note 3",
+        "text": "sdgdfgs",
+        "id": "d350ad5e-01bd-49fc-a963-d08a34449581"
+    }
+]
